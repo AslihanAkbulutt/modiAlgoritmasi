@@ -45,9 +45,6 @@ namespace ModiAlgoritmasi
             OptimumlukEkrani.Visible = false;
             label2.Visible = false;
 
-            txt = AnaText.Text;
-            len = txt.Length;
-            AnaText.Text = "";
 
         }
         private void OptimumlukKontrolu_Click_1(object sender, EventArgs e)
@@ -58,7 +55,7 @@ namespace ModiAlgoritmasi
 
         private void Ulastirma_Click_1(object sender, EventArgs e)
         {
-            AnaText.Visible = false;
+          
             
             OptimumlukEkrani.Visible = false;
             Ekran_Temizle();
@@ -67,8 +64,7 @@ namespace ModiAlgoritmasi
 
         private void Modi_Click(object sender, EventArgs e)
         {
-            
-            AnaText.Visible = false;
+           
             OptimumlukEkrani.Visible = false;
             Ekran_Temizle();
 
@@ -76,8 +72,6 @@ namespace ModiAlgoritmasi
         }
 
         
-        
-
         private void Temizle_Click(object sender, EventArgs e)
         {
             Ekran_Temizle();
