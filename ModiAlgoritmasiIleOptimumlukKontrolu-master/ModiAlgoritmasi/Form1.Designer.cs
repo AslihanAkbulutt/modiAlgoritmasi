@@ -47,11 +47,11 @@ namespace ModiAlgoritmasi
             this.Degerler = new System.Windows.Forms.Label();
             this.OptimumlukEkrani = new System.Windows.Forms.Panel();
             this.MatrisEkrani = new System.Windows.Forms.Panel();
-            this.HataMesaji = new System.Windows.Forms.Panel();
             this.HataMesajiIki = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.HataButonuIki = new System.Windows.Forms.Button();
+            this.HataMesaji = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HataTxt = new System.Windows.Forms.Label();
             this.HataButonu = new System.Windows.Forms.Button();
@@ -59,12 +59,14 @@ namespace ModiAlgoritmasi
             this.Top.SuspendLayout();
             this.OptimumlukEkrani.SuspendLayout();
             this.MatrisEkrani.SuspendLayout();
-            this.HataMesaji.SuspendLayout();
             this.HataMesajiIki.SuspendLayout();
+            this.HataMesaji.SuspendLayout();
+            this.AnaSayfaEkranı.SuspendLayout();
             this.SuspendLayout();
             // 
             // Top
             // 
+            this.Top.AutoSize = true;
             this.Top.BackColor = System.Drawing.Color.DimGray;
             this.Top.Controls.Add(this.OptimumlukKontrolu);
             this.Top.Controls.Add(this.Cikis);
@@ -72,7 +74,7 @@ namespace ModiAlgoritmasi
             this.Top.Location = new System.Drawing.Point(0, 0);
             this.Top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Top.Name = "Top";
-            this.Top.Size = new System.Drawing.Size(1015, 63);
+            this.Top.Size = new System.Drawing.Size(1015, 73);
             this.Top.TabIndex = 0;
             // 
             // OptimumlukKontrolu
@@ -281,6 +283,7 @@ namespace ModiAlgoritmasi
             // 
             // OptimumlukEkrani
             // 
+            this.OptimumlukEkrani.AutoScroll = true;
             this.OptimumlukEkrani.AutoSize = true;
             this.OptimumlukEkrani.BackColor = System.Drawing.Color.WhiteSmoke;
             this.OptimumlukEkrani.Controls.Add(this.Degerler);
@@ -297,7 +300,7 @@ namespace ModiAlgoritmasi
             this.OptimumlukEkrani.Controls.Add(this.SutunLabeli);
             this.OptimumlukEkrani.Controls.Add(this.SatirLabeli);
             this.OptimumlukEkrani.Controls.Add(this.Satir);
-            this.OptimumlukEkrani.Location = new System.Drawing.Point(1, 75);
+            this.OptimumlukEkrani.Location = new System.Drawing.Point(4, 4);
             this.OptimumlukEkrani.Margin = new System.Windows.Forms.Padding(4);
             this.OptimumlukEkrani.Name = "OptimumlukEkrani";
             this.OptimumlukEkrani.Size = new System.Drawing.Size(1009, 690);
@@ -305,25 +308,15 @@ namespace ModiAlgoritmasi
             // 
             // MatrisEkrani
             // 
+            this.MatrisEkrani.AutoScroll = true;
+            this.MatrisEkrani.AutoSize = true;
             this.MatrisEkrani.Controls.Add(this.HataMesajiIki);
             this.MatrisEkrani.Controls.Add(this.HataMesaji);
             this.MatrisEkrani.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MatrisEkrani.Location = new System.Drawing.Point(0, 178);
+            this.MatrisEkrani.Location = new System.Drawing.Point(0, 376);
             this.MatrisEkrani.Name = "MatrisEkrani";
-            this.MatrisEkrani.Size = new System.Drawing.Size(1009, 512);
+            this.MatrisEkrani.Size = new System.Drawing.Size(1009, 314);
             this.MatrisEkrani.TabIndex = 6;
-            // 
-            // HataMesaji
-            // 
-            this.HataMesaji.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.HataMesaji.Controls.Add(this.panel1);
-            this.HataMesaji.Controls.Add(this.HataTxt);
-            this.HataMesaji.Controls.Add(this.HataButonu);
-            this.HataMesaji.Location = new System.Drawing.Point(268, 143);
-            this.HataMesaji.Name = "HataMesaji";
-            this.HataMesaji.Size = new System.Drawing.Size(378, 168);
-            this.HataMesaji.TabIndex = 0;
-            this.HataMesaji.Visible = false;
             // 
             // HataMesajiIki
             // 
@@ -375,6 +368,18 @@ namespace ModiAlgoritmasi
             this.HataButonuIki.UseVisualStyleBackColor = false;
             this.HataButonuIki.Click += new System.EventHandler(this.HataButonuIki_Click);
             // 
+            // HataMesaji
+            // 
+            this.HataMesaji.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.HataMesaji.Controls.Add(this.panel1);
+            this.HataMesaji.Controls.Add(this.HataTxt);
+            this.HataMesaji.Controls.Add(this.HataButonu);
+            this.HataMesaji.Location = new System.Drawing.Point(268, 143);
+            this.HataMesaji.Name = "HataMesaji";
+            this.HataMesaji.Size = new System.Drawing.Size(378, 168);
+            this.HataMesaji.TabIndex = 0;
+            this.HataMesaji.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
@@ -414,11 +419,13 @@ namespace ModiAlgoritmasi
             // 
             // AnaSayfaEkranı
             // 
+            this.AnaSayfaEkranı.AutoSize = true;
             this.AnaSayfaEkranı.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
-            this.AnaSayfaEkranı.Location = new System.Drawing.Point(1, 75);
+            this.AnaSayfaEkranı.Controls.Add(this.OptimumlukEkrani);
+            this.AnaSayfaEkranı.Location = new System.Drawing.Point(0, 77);
             this.AnaSayfaEkranı.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AnaSayfaEkranı.Name = "AnaSayfaEkranı";
-            this.AnaSayfaEkranı.Size = new System.Drawing.Size(1014, 697);
+            this.AnaSayfaEkranı.Size = new System.Drawing.Size(1030, 727);
             this.AnaSayfaEkranı.TabIndex = 2;
             // 
             // Form1
@@ -430,7 +437,6 @@ namespace ModiAlgoritmasi
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1015, 759);
-            this.Controls.Add(this.OptimumlukEkrani);
             this.Controls.Add(this.AnaSayfaEkranı);
             this.Controls.Add(this.Top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -443,10 +449,12 @@ namespace ModiAlgoritmasi
             this.OptimumlukEkrani.ResumeLayout(false);
             this.OptimumlukEkrani.PerformLayout();
             this.MatrisEkrani.ResumeLayout(false);
-            this.HataMesaji.ResumeLayout(false);
-            this.HataMesaji.PerformLayout();
             this.HataMesajiIki.ResumeLayout(false);
             this.HataMesajiIki.PerformLayout();
+            this.HataMesaji.ResumeLayout(false);
+            this.HataMesaji.PerformLayout();
+            this.AnaSayfaEkranı.ResumeLayout(false);
+            this.AnaSayfaEkranı.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
